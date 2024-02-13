@@ -16,6 +16,7 @@ LABEL \
   summary="The system microservice from the Getting Started guide" \
   description="This image contains the system microservice running with the Open Liberty runtime."
 
+ENV VERBOSE=true
 COPY --chown=1001:0 src/main/liberty/config/ /config/
 RUN features.sh
 COPY --chown=1001:0 target/*.war /config/apps/
